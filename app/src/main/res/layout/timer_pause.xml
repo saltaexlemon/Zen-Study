@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/airforceblue"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/olivegreen"
+            android:padding="25dp">
+
+            <TextView
+                android:id="@+id/pauseText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/pause_text"
+                android:textSize="50sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/pauseDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pauseText"
+                android:layout_centerHorizontal="true"
+                android:text="@string/pause_timer_text"
+                android:textColor="@color/black"
+                android:textSize="25sp"></TextView>
+
+            <ImageButton
+                android:id="@+id/resumeButton"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_below="@+id/pauseDescription"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/resume_icon_text"
+                android:scaleType="fitCenter"
+                android:src="@drawable/resume_icon"
+                app:tint="@color/black"></ImageButton>
+
+            <TextView
+                android:id="@+id/pauseTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/resumeButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="60sp">
+            </TextView>
+
+            <!-- Insert Panda image HERE
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageView> -->
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

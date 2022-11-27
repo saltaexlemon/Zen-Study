@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/airforceblue">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:paddingHorizontal="10dp"
+        android:background="@color/olivegreen">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/pale_yellow"
+            android:text="@string/back"
+            android:textColor="@color/black"
+            android:textSize="15sp"></Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Edit Task"
+            android:textSize="30sp"
+            android:textColor="@color/black">
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/taskInfoArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/taskMainTitleArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/taskMainTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp"
+                android:text="Task Title:"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:background="@color/pale_orange">
+            </TextView>
+
+            <EditText
+                android:id="@+id/taskMainTitle"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/taskMainTitleText"
+                android:layout_toRightOf="@+id/taskMainTitleText"
+                android:background="@color/pale_orange"
+                android:inputType="text"
+                android:paddingVertical="5dp"
+                android:textColor="@color/black"
+                android:textSize="25sp"></EditText>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/taskMainInfoArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taskMainTitleArea">
+
+            <RelativeLayout
+                android:id="@+id/dueDateArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/dueDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Due Date:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"></TextView>
+
+                <ImageButton
+                    android:id="@+id/setDueDateButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_toEndOf="@+id/dueDateText"
+                    android:layout_toRightOf="@+id/dueDateText"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/task_duedate_icon">
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/dueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/setDueDateButton"
+                    android:layout_toRightOf="@+id/setDueDateButton"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"></TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/priorityArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dueDateArea"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/priorityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:text="Priority:"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"></TextView>
+
+                <Spinner
+                    android:id="@+id/prioritySpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/priorityText"
+                    android:layout_toRightOf="@+id/priorityText"
+                    android:spinnerMode="dropdown"></Spinner>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--
+        <GridView
+            android:id="@+id/subTaskGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taskMainInfoArea"
+            android:numColumns="1"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="20dp"
+            android:verticalSpacing="20dp">
+        </GridView> -->
+
+        <LinearLayout
+            android:id="@+id/subTaskFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/taskMainInfoArea"
+            android:paddingTop="10dp">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/addSubTaskArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subTaskFrame">
+
+            <TextView
+                android:id="@+id/addSubTaskText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Sub Task"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+
+            <ImageButton
+                android:id="@+id/addSubTaskButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/addSubTaskText"
+                android:layout_toEndOf="@+id/addSubTaskText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/task_add_icon">
+            </ImageButton>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttonArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textSize="20sp"
+                app:backgroundTint="@color/ashrose">
+            </Button>
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/deleteButton"
+                android:layout_toEndOf="@+id/deleteButton"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Save"
+                android:textSize="20sp"
+                app:backgroundTint="@color/red">
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

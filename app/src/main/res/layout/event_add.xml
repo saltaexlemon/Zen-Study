@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/airforceblue">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="top"
+        android:background="@color/olivegreen"
+        android:padding="3dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:text="Back"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainInfo_holder"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/topBar"
+        android:background="@color/orange_yellowish">
+
+        <TextView
+            android:id="@+id/eventTitleText"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Title    :"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/eventTitle"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/eventTitleText"
+            android:background="@color/white"
+            android:gravity="start"
+            android:inputType="textShortMessage"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/detailsText"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="Details:"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/details"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_toRightOf="@+id/detailsText"
+            android:background="@color/white"
+            android:gravity="start"
+            android:inputType="textShortMessage"
+            android:textColor="@color/black"
+            android:textAlignment="textStart"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mainInfo_holder"
+        android:layout_marginTop="20dp"
+        android:background="@color/orange_yellowish"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/setTimeArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/selectTimeText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/selectStartTime"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@+id/selectTimeText"
+                android:background="@drawable/timeicon" />
+
+            <TextView
+                android:id="@+id/setStartTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/selectStartTime"
+                android:layout_toRightOf="@+id/selectStartTime"
+                android:text="00:00 AM"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/timeToText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/setStartTimeText"
+                android:layout_toRightOf="@+id/setStartTimeText"
+                android:text="@string/to_text"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/selectEndTime"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/selectStartTime"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/selectTimeText"
+                android:layout_toRightOf="@+id/selectTimeText"
+                android:background="@drawable/timeicon" />
+
+            <TextView
+                android:id="@+id/setEndTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectStartTime"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/selectEndTime"
+                android:layout_toRightOf="@+id/selectEndTime"
+                android:text="00:00AM"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setDateArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setTimeArea"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/selectDate1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_toEndOf="@+id/dateText"
+                android:layout_toRightOf="@+id/dateText"
+                android:background="@drawable/calendar_icon" />
+
+            <TextView
+                android:id="@+id/setDateText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/selectDate1"
+                android:layout_toRightOf="@+id/selectDate1"
+                android:text="Date1"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dateTodateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/setDateText1"
+                android:layout_toRightOf="@+id/setDateText1"
+                android:text="@string/to_text"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/selectDate2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/selectDate1"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/dateText"
+                android:layout_toRightOf="@+id/dateText"
+                android:background="@drawable/calendar_icon" />
+
+            <TextView
+                android:id="@+id/setDateText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectDate1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/selectDate2"
+                android:text="Date2"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setReminderArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/setDateArea"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/reminderText"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Reminder:"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/setReminder1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/reminderText"
+                android:layout_toRightOf="@+id/reminderText"
+                android:text="1 Day Earlier"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <CheckBox
+                android:id="@+id/setReminder2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/setReminder1"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@+id/reminderText"
+                android:layout_toRightOf="@+id/reminderText"
+                android:text="1 Hour Earlier"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:text="Save" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

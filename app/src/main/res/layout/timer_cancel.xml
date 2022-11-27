@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/airforceblue"
+        android:padding="15dp"
+        android:layout_centerHorizontal="true"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/pale_yellow"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/cancelText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/cancel_session_text"
+                android:textColor="@color/black"
+                android:textSize="35sp">
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/cancelText"
+                android:paddingVertical="15dp">
+
+                <Button
+                    android:id="@+id/cancelYes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes_text"
+                    android:textSize="35sp"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="15dp"
+                    app:backgroundTint="@color/red"
+                    android:layout_alignParentBottom="true">
+                </Button>
+
+                <Button
+                    android:id="@+id/cancelNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_text"
+                    android:textSize="35sp"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="15dp"
+                    android:layout_toRightOf="@+id/cancelYes"
+                    android:layout_toEndOf="@+id/cancelYes"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:backgroundTint="@color/light_gray"
+                    android:textColor="@color/black"
+                    android:layout_alignParentBottom="true">
+                </Button>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

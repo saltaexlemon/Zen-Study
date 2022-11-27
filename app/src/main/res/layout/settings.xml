@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/airforceblue"
+    tools:context=".Settings">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:paddingHorizontal="10dp"
+        android:background="@color/olivegreen">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@color/pale_yellow"
+            android:text="@string/back"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/settings"
+            android:textSize="30sp"
+            android:textColor="@color/black">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userInfoArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="20dp">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/otherInfoArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userInfoArea"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/chooseMusicButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Choose Music"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:paddingVertical="20dp"
+            android:paddingHorizontal="25dp"
+            android:background="@drawable/settings_information_card">
+        </Button>
+
+        <Button
+            android:id="@+id/creditsButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chooseMusicButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/settings_information_card"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="20dp"
+            android:text="Credits"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            tools:visibility="gone"></Button>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/creditsButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/settings_information_card"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="20dp"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="15sp">
+        </Button>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_blue"
+    android:paddingTop="40dp"
+    android:paddingHorizontal="15dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/failedTimerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/failed_timer_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/ImageHolder"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/failedTimerText"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/pandaCelebrate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/panda_crying_text"
+            android:src="@drawable/panda_crying">
+        </ImageView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/totalStudyMinutesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ImageHolder"
+        android:text="@string/study_minutes_text"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/totalStudyMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalStudyMinutesText"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/totalPauseMinutesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalStudyMinutes"
+        android:text="@string/pause_minutes_text"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/totalPauseMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalPauseMinutesText"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/buttonArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totalPauseMinutes"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp">
+
+        <RelativeLayout
+            android:id="@+id/redoTimerArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/redoTimerIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/redo_timer_icon_text"
+                android:src="@drawable/redo_icon"
+                android:scaleType="fitCenter"
+                android:background="@color/transparent"
+                app:tint="@color/black">
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/redoTimerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/redoTimerIcon"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="@string/redo_timer_text"
+                android:textSize="15sp"
+                android:textColor="@color/black">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/homeArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/redoTimerArea"
+            android:layout_toEndOf="@+id/redoTimerArea"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp">
+
+            <ImageButton
+                android:id="@+id/homeIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_icon"
+                android:scaleType="fitCenter"
+                android:background="@color/transparent"
+                app:tint="@color/black"
+                android:contentDescription="@string/home_icon_text">
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homeIcon"
+                android:layout_centerHorizontal="true"
+                android:text="@string/home_text"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp">
+            </TextView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

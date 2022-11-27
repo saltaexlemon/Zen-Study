@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/olivegreen"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/taskMainTitle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@color/pale_orange"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="25sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/taskDueDate"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taskMainTitle"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp">
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/taskCheckBox"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/editButton"
+            android:layout_toStartOf="@+id/editButton"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:scaleX="1.4"
+            android:scaleY="1.4">
+        </CheckBox>
+
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/edit_icon">
+        </ImageButton>
+
+        <GridView
+            android:id="@+id/subTaskGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taskDueDate"
+            android:numColumns="1"
+            android:paddingVertical="20dp"
+            android:verticalSpacing="10dp"></GridView>
+
+        <LinearLayout
+            android:id="@+id/subTaskFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subTaskGridView"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

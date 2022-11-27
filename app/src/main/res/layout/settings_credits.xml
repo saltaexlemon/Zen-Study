@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settings_dialog_box"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/creditsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credits"
+        android:layout_centerHorizontal="true"
+        android:textSize="50sp"
+        android:textColor="@color/pale_yellow">
+    </TextView>
+
+    <TextView
+        android:id="@+id/creditsDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/creditsText"
+        android:layout_marginTop="5dp"
+        android:text="This application was created by:"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+    </TextView>
+
+    <RelativeLayout
+        android:id="@+id/creditArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/creditsDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        tools:visibility="gone">
+
+        <TextView
+            android:id="@+id/michelleText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/settings_credit_box"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:text="Michelle Chin Yee Lin"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/taitengText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/michelleText"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/settings_credit_box"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:text="Chan Tai Teng"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/darshanaaText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taitengText"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/settings_credit_box"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:text="Darshanaa Naresh"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+
+        <TextView
+            android:id="@+id/padmesshText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/darshanaaText"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/settings_credit_box"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="15dp"
+            android:text="Padmessh Kalyan Kumar"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"></TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
