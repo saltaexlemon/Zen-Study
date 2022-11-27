@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/olivegreen"
+        android:padding="3dp">
+
+        <ImageButton
+            android:id="@+id/musicButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/transparent"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/music_icon"
+            android:scaleType="fitCenter"
+            android:src="@drawable/music_icon_off"
+            app:tint="@color/black">
+        </ImageButton>
+
+        <RelativeLayout
+            android:id="@+id/timerCountdownArea"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@color/pale_yellow"
+            android:paddingLeft="5dp"
+            android:paddingStart="5dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="5dp"
+            tools:ignore="RelativeOverlap">
+
+            <ImageView
+                android:id="@+id/timerIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/timer_icon"
+                app:tint="@color/black"
+                android:contentDescription="@string/timer_icon">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/timerCountdownHours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/timerIcon"
+                android:layout_toRightOf="@+id/timerIcon"
+                android:textColor="@color/black"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/timerCountdownSeparator1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/timerCountdownHours"
+                android:layout_toRightOf="@+id/timerCountdownHours"
+                android:textColor="@color/black"
+                android:text="@string/timer_countdown_separator"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/timerCountdownMinutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/timerCountdownSeparator1"
+                android:layout_toRightOf="@+id/timerCountdownSeparator1"
+                android:textColor="@color/black"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/timerCountdownSeparator2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/timerCountdownMinutes"
+                android:layout_toRightOf="@+id/timerCountdownMinutes"
+                android:textColor="@color/black"
+                android:text="@string/timer_countdown_separator"
+                android:textSize="30sp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/timerCountdownSeconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/timerCountdownSeparator2"
+                android:layout_toRightOf="@+id/timerCountdownSeparator2"
+                android:textColor="@color/black"
+                android:textSize="30sp">
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bambooArea"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@color/olivegreen">
+
+            <RelativeLayout
+                android:id="@+id/bambooCurrencyArea"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/bamboo_currency_border"
+                android:layout_centerVertical="true"
+                android:paddingHorizontal="10dp">
+
+                <TextView
+                    android:id="@+id/bambooNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/bambooCurrencyArea"
+                android:layout_toEndOf="@+id/bambooCurrencyArea"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bamboo_currency_border">
+
+                <ImageView
+                    android:id="@+id/bambooIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/bamboo_icon"
+                    android:src="@drawable/bamboo"></ImageView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/homeFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_above="@+id/bottomNavigation">
+
+        <ImageView
+            android:id="@+id/homeFrameImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop">
+        </ImageView>
+
+    </FrameLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/olivegreen">
+
+        <Button
+            android:id="@+id/pandaButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="@color/olivegreen"
+            android:text="@string/panda"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/panda_icon"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
+
+        <Button
+            android:id="@+id/shopButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="@color/olivegreen"
+            android:text="@string/shop"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/shop_icon"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
+
+        <Button
+            android:id="@+id/plannerButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="@color/olivegreen"
+            android:text="@string/planner"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/calendar_icon"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
+
+        <Button
+            android:id="@+id/tasksButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="@color/olivegreen"
+            android:text="@string/tasks"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/tasks_icon"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:backgroundTint="@color/olivegreen"
+            android:text="@string/settings"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/settings_icon"
+            style="?android:attr/buttonBarButtonStyle">
+        </Button>
+
+    </LinearLayout>
+
+</RelativeLayout>

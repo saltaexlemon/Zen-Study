@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/ashrose"
+    tools:context=".PlannerView">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="top"
+        android:background="@color/olivegreen"
+        android:padding="3dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:text="@string/back"
+            android:textColor="@color/black"
+            tools:ignore="TextContrastCheck" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pale_yellow">
+
+        <TextView
+            android:id="@+id/monthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/prevButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/previous_button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/previous_month_icon"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/next_button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/next_month_icon"
+            app:tint="@color/black"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/more_event_menu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/nextButton"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/more_menu"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dotmenu_icon"
+            app:tint="@color/black"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@color/ashrose">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Sun"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Mon"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Tue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Wed"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Thu"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Fri"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="@color/ashrose"
+            android:gravity="center"
+            android:text="Sat"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:numColumns="7">
+
+    </GridView>
+
+    <GridView
+        android:id="@+id/eventGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="1"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp">
+    </GridView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventGridView"
+        android:layout_marginBottom="10dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_event"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:contentDescription="@string/event_add"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@color/olivegreen"
+            android:src="@drawable/add_icon"
+            app:borderWidth="0dp"
+            app:fabSize="auto"
+            tools:ignore="SpeakableTextPresentCheck">
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    </RelativeLayout>
+
+    <!--
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendarHolder" >
+
+        <CalendarView
+            android:id="@+id/simpleCalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dateTextAppearance="@android:style/TextAppearance.Large"
+            android:monthTextAppearance="@android:style/TextAppearance.Large"
+            android:weekDayTextAppearance="@android:style/TextAppearance.Medium"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:theme="@style/CalenderViewCustom" />
+
+        <ImageButton
+            android:id="@+id/add_event"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="100dp"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/event_add"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_action"
+            tools:ignore="SpeakableTextPresentCheck"></ImageButton>
+
+    </RelativeLayout>
+    -->
+
+</LinearLayout>

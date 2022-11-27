@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/previewArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter">
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/pale_yellow_translucent"
+        android:padding="15dp"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/equipText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/equip_text"
+            android:textColor="@color/black"
+            android:textSize="35sp">
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/equipText"
+            android:paddingVertical="15dp">
+
+            <Button
+                android:id="@+id/equipYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes_text"
+                android:textSize="35sp"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="15dp"
+                app:backgroundTint="@color/red_translucent">
+            </Button>
+
+            <Button
+                android:id="@+id/equipNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_text"
+                android:textSize="35sp"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="15dp"
+                android:layout_toRightOf="@+id/equipYes"
+                android:layout_toEndOf="@+id/equipYes"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                app:backgroundTint="@color/light_gray_translucent"
+                android:textColor="@color/black">
+            </Button>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

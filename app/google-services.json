@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "20379847905",
+    "firebase_url": "https://zenstudy-f8dab-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "zenstudy-f8dab",
+    "storage_bucket": "zenstudy-f8dab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20379847905:android:42daf22bccfa9cae74bba0",
+        "android_client_info": {
+          "package_name": "com.example.zenstudy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "20379847905-ca05f947t5dbknccmsisve37kjlt22v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSHLknDgC8dh2YmoUQDTLWzKx-oPuUA9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "20379847905-ca05f947t5dbknccmsisve37kjlt22v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

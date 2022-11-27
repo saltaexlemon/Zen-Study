@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/olivegreen"
+    tools:context=".Shop">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/olivegreen"
+        android:paddingHorizontal="10dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@color/pale_yellow"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/back"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            tools:ignore="RelativeOverlap,TextContrastCheck" />
+
+        <RelativeLayout
+            android:id="@+id/bambooArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@color/olivegreen">
+
+            <RelativeLayout
+                android:id="@+id/bambooCurrencyArea"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/bamboo_currency_border"
+                android:paddingHorizontal="10dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/bambooNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toRightOf="@+id/bambooCurrencyArea"
+                android:layout_toEndOf="@+id/bambooCurrencyArea"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bamboo_currency_border">
+
+                <ImageView
+                    android:id="@+id/bambooIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/bamboo_icon"
+                    android:src="@drawable/bamboo"></ImageView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pandaShopBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/panda_shop_bg"
+        app:srcCompat="@drawable/panda" />
+
+    <!-- Remember to change this to actual text view -->
+<!--    <ImageView-->
+<!--        android:id="@+id/pandaShopWord"-->
+<!--        android:layout_width="338dp"-->
+<!--        android:layout_height="121dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="90dp"-->
+<!--        android:contentDescription="@string/pandashopword"-->
+<!--        app:srcCompat="@drawable/panda_shop" />-->
+
+    <TextView
+        android:id="@+id/bambooNumber"
+        android:layout_width="338dp"
+        android:layout_height="121dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:text="Zen Study Shop"
+        android:textSize="40dp"></TextView>
+
+
+
+    <ImageView
+        android:id="@+id/roomSkinTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pandaShopBg"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/roomskintitle"
+        app:srcCompat="@drawable/room_category" />
+
+    <GridView
+        android:id="@+id/skinsGridView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:horizontalSpacing="15dp"
+        android:verticalSpacing="20dp"
+        android:numColumns="2"
+        android:layout_below="@+id/roomSkinTitle"
+        android:layout_centerHorizontal="true">
+    </GridView>
+
+</RelativeLayout>

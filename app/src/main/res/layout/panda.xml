@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Panda">
+
+    <ImageView
+        android:id="@+id/roomSkin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop">
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/transparent">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/pale_yellow"
+            android:text="@string/back"
+            android:textColor="@color/black"
+            tools:ignore="RelativeOverlap,TextContrastCheck"
+            tools:targetApi="lollipop" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
